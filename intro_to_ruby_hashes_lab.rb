@@ -19,7 +19,9 @@ end
 
 def id_generator
   # return a hash with a key :id assigned to positive integer
-  my_hash[:id] = 1994
+  my_hash = {
+    :id => 1994
+  }
   
 end
 
@@ -33,8 +35,9 @@ end
 def read_from_hash(hash, key)
   # return the correct value using the hash and key parameters
   if !hash[key] 
-    return nil
+    return hash[key]
   end
+  return nil
 end
 
 def update_counting_hash(hash, key)
